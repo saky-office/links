@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINKS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      transition: background-color 0.3s, color 0.3s; /* 动画过渡 */
+    }
+
+    /* 控制卡片的容器，支持修改每行显示卡片的数量 */
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap; /* 允许换行 */
+      gap: 20px;
+      padding: 20px;
+      justify-content: center; /* 居中显示卡片 */
+    }
+
+    /* 默认卡片样式，适用于浅色模式 */
+    .profile-card {
+      width: 250px; /* 设置卡片宽度 */
+      height: 70px; /* 压缩卡片高度 */
+      background-color: transparent; /* 初始背景色为透明 */
+      border-radius: 16px; /* 设置卡片圆角 */
+      border: 1px solid #dcdcdc; /* 浅色模式边框为浅灰色 */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+      cursor: pointer; /* 鼠标悬停时显示为指针 */
+      text-decoration: none; /* 移除链接下划线 */
+      position: relative;
+    }
+
+    /* 深色模式下的样式 */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111; /* 深色模式背景为深色 */
+        color: #fff; /* 深色模式文本为白色 */
+      }
+
+      .profile-card {
+        border: 1px solid #555; /* 深色模式边框为深灰色 */
+        background-color: #333; /* 深色模式背景为深色 */
+      }
+
+      .profile-card:hover {
+        background-color: #7b5bf3; /* 背景色变为紫色 */
+        border-color: #7b5bf3; /* 边框颜色变为紫色 */
+      }
+    }
+
+    /* 浅色模式下的样式 */
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #fff; /* 浅色模式背景为白色 */
+        color: #000; /* 浅色模式文本为黑色 */
+      }
+
+      .profile-card {
+        border: 1px solid #dcdcdc; /* 浅色模式边框为浅灰色 */
+        background-color: #fff; /* 浅色模式背景为白色 */
+      }
+
+      .profile-card:hover {
+        background-color: #7b5bf3; /* 背景色变为紫色 */
+        border-color: #7b5bf3; /* 边框颜色变为紫色 */
+      }
+    }
+
+    /* 卡片的悬停效果 */
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* 头像的样式，设置上下间距为1px */
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px; /* 头像与文本之间的间隔 */
+      margin-top: 1px; /* 设置头像的顶部间距为1px */
+      margin-bottom: 1px; /* 设置头像的底部间距为1px */
+    }
+
+    /* 卡片内容 */
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .profile-info h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .profile-info p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 1200px) {
+      .profile-card {
+        width: 220px; /* 在小屏幕下调整卡片宽度 */
+      }
+    }
+
+    @media (max-width: 900px) {
+      .profile-card {
+        width: 200px; /* 在更小屏幕下调整卡片宽度 */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-card {
+        width: 100%; /* 在手机屏幕下卡片宽度占满整行 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="profile-container" class="profile-container">
+    <!-- 这里是动态插入的卡片内容 -->
+  </div>
+
+  <script>
+    // 远程 JSON 数据的 URL
+    const jsonUrl = "./links.json";
+
+    // 使用 fetch 获取远程 JSON 数据
+    fetch(jsonUrl)
+      .then(response => response.json())
+      .then(data => {
+        const profileContainer = document.getElementById('profile-container');
+        
+        // 渲染卡片
+        data.forEach(profile => {
+          const card = document.createElement('a');
+          card.classList.add('profile-card');
+          card.href = profile.url; // 点击卡片跳转到对应的 URL
+          card.target = "_blank"; // 在新标签页打开链接
+
+          // 填充卡片内容
+          card.innerHTML = `
+            <img src="${profile.avatar}" alt="avatar" class="avatar" />
+            <div class="profile-info">
+              <h4># ${profile.name}</h4>
+              <p>${profile.desc}</p>
+            </div>
+          `;
+          profileContainer.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('获取远程数据失败:', error);
+        document.getElementById('profile-container').innerHTML = '加载数据失败，请稍后重试。';
+      });
+  </script>
+
+</body>
+</html>
