@@ -1,38 +1,26 @@
 [
   {
     "name": "ACFOX",
-    "url": "https://mikuos.com/",
+    "url": "https://www.mikuos.com//",
     "avatar": "https://cdn.jsdelivr.net/gh/yimioffice/in/i/20200317180531.jpg",
-    "desc": "ACFOX"
-  },
-  {
-    "name": "Crj0b‘s Blog",
-    "url": "https://blog.crj0b.com/",
-    "avatar": "https://blog.crj0b.com/img/avatar.png",
-    "desc": "Crj0b‘s Blog"
+    "desc": "ACfox个人博客"
   },
   {
     "name": "Ericam_blog",
     "url": "https://ericam.top/",
-    "avatar": "https://ericam.top/images/avatar.png?v=1603186851006",
-    "desc": "Ericam_blog"
+    "avatar": "https://ericamblog.oss-cn-shanghai.aliyuncs.com/all/avatar.png",
+    "desc": "十步一代码，千里不BUG"
   },
   {
     "name": "krau‘s blog",
     "url": "https://krau.top/",
-    "avatar": "https://avatar.dawnlab.me/qq/1636648138",
-    "desc": "krau‘s blog"
-  },
-  {
-    "name": "KZero's Blog",
-    "url": "https://blog.kzero.vip/",
-    "avatar": "https://blog.kzero.vip/images/avatar.gif",
-    "desc": "KZero's Blog"
+    "avatar": "https://krau.top/photo/avatar/avatar.jpg",
+    "desc": "子供の时の梦は言えますか"
   },
   {
     "name": "Leao‘s blog",
     "url": "https://blog.ascn.site",
-    "avatar": "https://blog.ascn.site/images/avatar.jpg",
+    "avatar": "https://cdn1.blog.ascn.site/pic/favicon-180x180-leao9203.avif",
     "desc": "Leao‘s blog"
   },
   {
@@ -42,15 +30,9 @@
     "desc": "Ridmo2333"
   },
   {
-    "name": "Oblivion",
-    "url": "http://blog.oierlin.cf/",
-    "avatar": "http://blog.oierlin.cf/usr/uploads/logo.jpg",
-    "desc": "Oblivion"
-  },
-  {
     "name": "Parksi",
     "url": "https://www.parksi.top/",
-    "avatar": "https://www.parksi.top/images/avatar.png?v=1596973654391",
+    "avatar": "https://q1.qlogo.cn/g?b=qq&nk=3548154662&s=640",
     "desc": "Parksi"
   },
   {
@@ -62,13 +44,13 @@
   {
     "name": "GBY's Blog",
     "url": "https://skina.cn/",
-    "avatar": "https://skina.cn/img/avatar.png",
+    "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1692207864&s=640",
     "desc": "GBY's Blog"
   },
   {
     "name": "SoSilent",
     "url": "https://sosilent.top/",
-    "avatar": "https://www.saky.site//usr/plugins/Links/nopic.png",
+    "avatar": "https://img.sosilent.top/image/avatar.jpg",
     "desc": "SoSilent"
   },
   {
@@ -98,7 +80,7 @@
   {
     "name": "暮去长空",
     "url": "https://www.mepoem.com/",
-    "avatar": "https://www.mepoem.com/image.jpg",
+    "avatar": "https://www.mepoem.com/themes/howiehz-higan/assets/images/logo.png",
     "desc": "暮去长空"
   },
   {
@@ -112,12 +94,6 @@
     "url": "https://www.xvkes.cn/",
     "avatar": "https://www.xvkes.cn/logoavatar/avatar.jpg",
     "desc": "蓄客博客"
-  },
-  {
-    "name": "迷鹿的部落阁",
-    "url": "https://www.lostfawn.cn/",
-    "avatar": "https://cdn.jsdelivr.net/gh/jack-bin183/img/custom/avatar.png",
-    "desc": "迷鹿的部落阁"
   },
   {
     "name": "雾时之森",
@@ -138,15 +114,9 @@
     "desc": "ITJoker"
   },
   {
-    "name": "月萌",
-    "url": "https://blog.moennar.cn/",
-    "avatar": "https://cos-1252620216.cos.ap-chengdu.myqcloud.com/art.jpg",
-    "desc": "月萌"
-  },
-  {
     "name": "蓝小柠的博客",
-    "url": "https://www.bleshi.com/",
-    "avatar": "https://www.bleshi.com/resources/links.jpg",
+    "url": "https://bleshi.com/",
+    "avatar": "https://cloudcache.bleshi.com/links.jpg",
     "desc": "蓝小柠的博客"
   }
 ]
